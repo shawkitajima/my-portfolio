@@ -1,0 +1,7 @@
+<%- include('./partials/header') %>
+
+<% articles.forEach(function(article) { %>
+    <p><a href="<%=article.url%>" target="_blank"><%=article.title%></a></p>
+<% }) %>
+
+<%- include('./partials/footer') %>
