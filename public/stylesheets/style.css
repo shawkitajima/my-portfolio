@@ -3,9 +3,37 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 a {
   color: #00B7FF;
+}
+
+nav {
+  background-color: black;
+}
+
+.about {
+  width: 75%;
+}
+
+nav.nav-center ul {
+  text-align: center;
+}
+nav.nav-center ul li {
+  display: inline;
+  float: none;
+}
+nav.nav-center ul li a {
+  display: inline-block;
+  padding-top: 0.5rem;
+}
+
+.circles {
+  border-radius: 50% 50%;
+  width: 32px;
+}
+
+.square {
+  width: 32px;
 }

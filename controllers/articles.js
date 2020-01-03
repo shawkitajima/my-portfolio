@@ -1,4 +1,3 @@
-const request = require('request');
 const feed = require('rss-to-json')
 
 module.exports = {
