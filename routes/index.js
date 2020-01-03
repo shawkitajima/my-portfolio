@@ -1,17 +1,21 @@
 var express = require('express');
 var router = express.Router();
-var articleCtrl = require('../controllers/articles')
+const feed = require('rss-to-json')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('about');
+  feed.load('https://medium.com/feed/@shawkitajima', function(err, rss) {
+    let articles = [];
+    rss.items.forEach(article => {
+        articles.push({
+            title: article.title,
+            url: article.url
+        });
+    })
+    res.render('about', {
+        articles
+    })
+  })
 });
-router.get('/articles', articleCtrl.index);
-router.get('/about', function(req, res) {
-  res.render('about');
-});
-router.get('/github', function(req, res) {
-  res.render('github');
-})
 
 module.exports = router;
