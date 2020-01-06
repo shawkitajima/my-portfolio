@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const feed = require('rss-to-json')
+const feed = require('rss-to-json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -11,11 +11,15 @@ router.get('/', function(req, res, next) {
             title: article.title,
             url: article.url
         });
-    })
+    });
     res.render('about', {
         articles
-    })
-  })
+    });
+  });
 });
+router.get('/download', function(req, res) {
+  const file = 'public/images/resume.pdf';
+  res.download(file);
+})
 
 module.exports = router;
