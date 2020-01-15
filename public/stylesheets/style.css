@@ -30,10 +30,41 @@ nav.nav-center ul li a {
 }
 
 .circles {
+  padding-top: 50%;
   border-radius: 50% 50%;
   width: 32px;
 }
 
 .square {
+  padding-top: 60%;
   width: 32px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-cards {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.carousel { 
+  min-height: 800px;
+  max-width: 95%;
+}
+
+a {
+  z-index: 200;
+}
+.carousel .carousel-item {
+    width: 80% !important;
+}
+
+
+@media (max-width:600px) { 
+  .carousel { 
+    min-height: 200px;
+  }
 }
