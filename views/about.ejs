@@ -26,10 +26,13 @@
     </p>
 </div>
 
-<h3>My articles</h3>
-<% articles.forEach(function(article) { %>
-    <p><a href="<%=article.url%>" target="_blank"><%=article.title%></a></p>
-<% }) %>
+
+<ul class="collection with-header">
+    <li class="collection-header"><h4>My Articles</h4></li>        
+    <% articles.forEach(function(article) { %>
+        <li class="collection-item"><div><%=article.title%><a href="<%=article.url%>" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+    <% }) %>
+</ul>
 
 <h3>My favorite portfolio projects!</h3>
 
