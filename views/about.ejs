@@ -26,13 +26,12 @@
     </p>
 </div>
 
-
-<ul class="collection with-header">
-    <li class="collection-header"><h4>My Articles</h4></li>        
+<h4>My Articles</h4>
+<div class="collection with-header">        
     <% articles.forEach(function(article) { %>
-        <li class="collection-item"><div><%=article.title%><a href="<%=article.url%>" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+        <a class="collection-item" href="<%=article.url%>" target="=_blank"><%=article.title%></a>
     <% }) %>
-</ul>
+</div>
 
 <h3>My favorite portfolio projects!</h3>
 
@@ -46,7 +45,7 @@
             </div>
             <div class="card-content">
                 <p>A Django web app that allows you to watch public companies and test investments</p>
-                <p><a href="https://github.com/shawkitajima/Alpha-Evaluator">Github</a></p>
+                <p><a href="https://github.com/shawkitajima/Alpha-Evaluator" target="=_blank">Github</a></p>
             </div>
         </div>
     </div>
@@ -59,7 +58,7 @@
             </div>
             <div class="card-content">
                 <p>A Node and Express CRUD web application that tracks League of Legends players using the Riot API</p>
-                <p><a href="https://github.com/shawkitajima/Project-2---League-Stat-Finder">Github</a></p>
+                <p><a href="https://github.com/shawkitajima/Project-2---League-Stat-Finder" target="=_blank">Github</a></p>
             </div>
         </div>
     </div>
@@ -72,7 +71,7 @@
                 </div>
                 <div class="card-content">
                     <p>The result of my follow-along <a href="https://medium.com/@shawkitajima/from-no-stack-to-some-stack-oauth-passport-and-some-men-46ffb16fa4cd" target="_blank">Medium</a> article to create a Node CRUD app with Oauth</p>
-                    <p><a href="https://github.com/shawkitajima/my-oauth-medium-project">Github</a></p>
+                    <p><a href="https://github.com/shawkitajima/my-oauth-medium-project" target="=_blank">Github</a></p>
                 </div>
             </div>
     </div>
@@ -85,7 +84,7 @@
             </div>
             <div class="card-content">
                 <p>The classic zero player game of Conway's Game of Life</p>
-                <p><a href="https://github.com/shawkitajima/CodeRetreat-Conways-Game-Of-Life">Github</a></p>
+                <p><a href="https://github.com/shawkitajima/CodeRetreat-Conways-Game-Of-Life" target="=_blank">Github</a></p>
             </div>
         </div>
     </div>
@@ -98,7 +97,7 @@
             </div>
             <div class="card-content">
                 <p>Player vs computer batteship game with a smarter than average computer. It does not cheat</p>
-                <p><a href="https://github.com/shawkitajima/Battleship">Github</a></p>
+                <p><a href="https://github.com/shawkitajima/Battleship" target="=_blank">Github</a></p>
             </div>
         </div>
     </div>
@@ -111,11 +110,22 @@
             </div>
             <div class="card-content">
                 <p>A ridiculously obnoxious game of slots. I hope you like Tom Jones</p>
-                <p><a href="https://github.com/shawkitajima/Slot-Machine-Game">Github</a></p>
+                <p><a href="https://github.com/shawkitajima/Slot-Machine-Game" target="=_blank">Github</a></p>
             </div>
         </div>
     </div>
 </div>
 
-
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+  
 <%- include('./partials/footer') %>
