@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
   });
 });
 router.get('/download', function(req, res) {
-  const file = 'public/images/resume.pdf';
+  const file = 'public/images/shaw-kitajima-resume.pdf';
   res.download(file);
 })
 
